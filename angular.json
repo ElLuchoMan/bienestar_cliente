@@ -174,7 +174,9 @@
               "src/tsconfig.spec.json"
             ],
             "typeCheck": true,
-            "exclude": ["**/node_modules/**/*"]
+            "exclude": [
+              "**/node_modules/**/*"
+            ]
           }
         }
       }
@@ -212,5 +214,8 @@
     "@schematics/angular:directive": {
       "prefix": "ngx"
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

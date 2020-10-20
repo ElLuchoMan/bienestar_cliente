@@ -17,6 +17,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ImplicitAutenticationService } from './@core/utils/implicit_autentication.service';
+import { EstudiantesService } from '../app/@core/helpers/estudiantes/estudiantes.service';
+
 import {
   NbChatModule,
   NbDatepickerModule,
@@ -164,8 +166,10 @@ export class MaterialModule {}
     }),
   ],
   bootstrap: [AppComponent],
-  providers: [ImplicitAutenticationService,
+  providers: [
+    ImplicitAutenticationService,
     { provide: APP_BASE_HREF, useValue: '/' },
+    EstudiantesService,
   ],
 })
 export class AppModule {
